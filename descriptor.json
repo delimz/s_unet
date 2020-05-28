@@ -376,6 +376,6 @@
          "value-key" : "@ID"
       }
    ],
-   "name" : "ratseg2",
+   "name" : "unet",
    "schema-version" : "cytomine-0.1"
 }
