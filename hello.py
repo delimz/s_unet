@@ -1,19 +1,19 @@
-import tensorflow as tf
+import os
+import subprocess
 import cv2
-import matplotlib.pyplot as plt
+import tensorflow as tf
+
 import cytomine
 from cytomine import Cytomine
 from cytomine.models import Annotation, Job, ImageInstanceCollection, AnnotationCollection, Property,  AttachedFileCollection
 
 from argparse import ArgumentParser
 import sys
-print(sys.argv[1:])
 
-import os
 base_path = os.getenv("HOME")
 
+print(sys.argv[1:])
 os.environ['TF_FORCE_GPU_ALLOW_GROWTH']='true'
-import subprocess
 
 from unet.params import parserer
 
@@ -67,8 +67,9 @@ with cytomine.CytomineJob.from_cli(sys.argv[1:]) as cj:
         '--slice_term', str(params.slice_term),
         '--imgs-test',*[str(x) for x in params.imgs_test],
         '--terms',*[str(x) for x in params.terms],
-        '--model', params.checkpoint ])#,
-        #'--upload','True'])
+        '--no',params.oc_num,
+        '--model', params.checkpoint ,
+        '--upload',params.upload])
 
     if stat.returncode !=0 :
         cj.job.update(status=cj.job.FAILED)
