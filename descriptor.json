@@ -1,5 +1,5 @@
 {
-   "command-line" : "CYTOMINE_HOST CYTOMINE_PUBLIC_KEY CYTOMINE_PRIVATE_KEY CYTOMINE_ID_PROJECT CYTOMINE_ID_SOFTWARE PRESET DEPTH CONVOLUTIONS FILTER_FACTOR DILATIONS FILTER_SIZES RESIDUALS FRONT_LEG BACK_LEG CHECKPOINT MIN_OUTPUT_SIZE N_JOBS BATCH_SIZE EPOCHS HUE_DELTA SATURATION_DELTA BRIGHTNESS_DELTA CONTRAST_DELTA HORIZONTAL_FLIP ROTATE_RANGE DEFORMATION_RANGE IMGS_TRAIN IMGS_VAL IMGS_TEST DATADIR TERMS SLICE_TERM CROP_SIZE",
+   "command-line" : "CYTOMINE_HOST CYTOMINE_PUBLIC_KEY CYTOMINE_PRIVATE_KEY CYTOMINE_ID_PROJECT CYTOMINE_ID_SOFTWARE PRESET DEPTH CONVOLUTIONS FILTER_FACTOR DILATIONS FILTER_SIZES RESIDUALS FRONT_LEG BACK_LEG CHECKPOINT MIN_OUTPUT_SIZE N_JOBS BATCH_SIZE EPOCHS HUE_DELTA SATURATION_DELTA BRIGHTNESS_DELTA CONTRAST_DELTA HORIZONTAL_FLIP ROTATE_RANGE DEFORMATION_RANGE IMGS_TRAIN IMGS_VAL IMGS_TEST DATADIR TERMS SLICE_TERM CROP_SIZE OC_NUM THRESHOLD UPLOAD",
    "container-image" : {
       "image" : "delimz/s_unet",
       "type" : "singularity"
@@ -374,8 +374,41 @@
          "set-by-server" : false,
          "type" : "Number",
          "value-key" : "@ID"
+      },
+      {
+         "command-line-flag" : "--@id",
+         "default" : 4,
+         "description" : "number of openning and closing",
+         "id" : "oc_num",
+         "name" : "oc num",
+         "optional" : true,
+         "set-by-server" : false,
+         "type" : "Number",
+         "value-key" : "@ID"
+      },
+      {
+         "command-line-flag" : "--@id",
+         "default" : 0.5,
+         "description" : "Threshold to retain",
+         "id" : "threshold",
+         "name" : "threshold",
+         "optional" : true,
+         "set-by-server" : false,
+         "type" : "Number",
+         "value-key" : "@ID"
+      },
+      {
+         "command-line-flag" : "--@id",
+         "default" : false,
+         "description" : "upload the result",
+         "id" : "upload",
+         "name" : "upload",
+         "optional" : true,
+         "set-by-server" : false,
+         "type" : "Boolean",
+         "value-key" : "@ID"
       }
    ],
-   "name" : "unet",
+   "name" : "ratseg2",
    "schema-version" : "cytomine-0.1"
 }
