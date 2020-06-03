@@ -69,6 +69,7 @@ with cytomine.CytomineJob.from_cli(sys.argv[1:]) as cj:
         '--terms',*[str(x) for x in params.terms],
         '--no',str(params.oc_num),
         '--model', params.checkpoint ,
+        '--crop_size',str(params.crop_size),
         '--upload',str(params.upload)])
 
     if stat.returncode !=0 :
