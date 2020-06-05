@@ -2,8 +2,7 @@ FROM delimz/base2:latest
 
 COPY hello.py /app/
 
-ADD https://api.github.com/repos/delimz/unet/git/refs/heads/master version.json
-RUN git clone https://github.com/delimz/unet.git
+RUN git clone https://github.com/delimz/unet.git && cd unet && git checkout 0dbc00e
 
 WORKDIR /app
 
