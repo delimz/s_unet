@@ -190,7 +190,7 @@
       },
       {
          "command-line-flag" : "--@id",
-         "default" : 16,
+         "default" : -1,
          "description" : "number of cpu jobs for image preprocessing",
          "id" : "n_jobs",
          "name" : "n jobs",
@@ -366,7 +366,7 @@
       },
       {
          "command-line-flag" : "--@id",
-         "default" : 2048,
+         "default" : 1024,
          "description" : "size of the square tiles to crop",
          "id" : "crop_size",
          "name" : "crop size",
@@ -409,6 +409,6 @@
          "value-key" : "@ID"
       }
    ],
-   "name" : "ratseg2",
+   "name" : "unet",
    "schema-version" : "cytomine-0.1"
 }
