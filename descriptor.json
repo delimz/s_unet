@@ -63,7 +63,7 @@
       },
       {
          "command-line-flag" : "--@id",
-         "default" : null,
+         "default-value" : null,
          "description" : "preset model parameters, either unet vnet mnet segnet",
          "id" : "preset",
          "name" : "preset",
@@ -74,7 +74,7 @@
       },
       {
          "command-line-flag" : "--@id",
-         "default" : 4,
+         "default-value" : 4,
          "description" : "depth of unet",
          "id" : "depth",
          "name" : "depth",
@@ -85,7 +85,7 @@
       },
       {
          "command-line-flag" : "--@id",
-         "default" : [
+         "default-value" : [
             2
          ],
          "description" : "number of conv per encoder",
@@ -98,7 +98,7 @@
       },
       {
          "command-line-flag" : "--@id",
-         "default" : 16,
+         "default-value" : 16,
          "description" : "base number of filters in first level of convolution",
          "id" : "filter_factor",
          "name" : "filter factor",
@@ -109,7 +109,7 @@
       },
       {
          "command-line-flag" : "--@id",
-         "default" : [
+         "default-value" : [
             1
          ],
          "description" : "size of dilation",
@@ -122,7 +122,7 @@
       },
       {
          "command-line-flag" : "--@id",
-         "default" : [
+         "default-value" : [
             3
          ],
          "description" : "size of the filters for convolutions",
@@ -135,7 +135,7 @@
       },
       {
          "command-line-flag" : "--@id",
-         "default" : false,
+         "default-value" : false,
          "description" : "use residual connection",
          "id" : "residuals",
          "name" : "residuals",
@@ -146,7 +146,7 @@
       },
       {
          "command-line-flag" : "--@id",
-         "default" : false,
+         "default-value" : false,
          "description" : "deep supervision encoder side",
          "id" : "front_leg",
          "name" : "front leg",
@@ -157,7 +157,7 @@
       },
       {
          "command-line-flag" : "--@id",
-         "default" : false,
+         "default-value" : false,
          "description" : "deep supervision decoder side",
          "id" : "back_leg",
          "name" : "back leg",
@@ -168,7 +168,7 @@
       },
       {
          "command-line-flag" : "--@id",
-         "default" : null,
+         "default-value" : null,
          "description" : "checkpoint path to use",
          "id" : "checkpoint",
          "name" : "checkpoint",
@@ -179,7 +179,7 @@
       },
       {
          "command-line-flag" : "--@id",
-         "default" : 512,
+         "default-value" : 512,
          "description" : "minimum size of output of the neural network",
          "id" : "min_output_size",
          "name" : "min output size",
@@ -190,7 +190,7 @@
       },
       {
          "command-line-flag" : "--@id",
-         "default" : -1,
+         "default-value" : -1,
          "description" : "number of cpu jobs for image preprocessing",
          "id" : "n_jobs",
          "name" : "n jobs",
@@ -201,7 +201,7 @@
       },
       {
          "command-line-flag" : "--@id",
-         "default" : 5,
+         "default-value" : 5,
          "description" : "number of tiles per batch of training step",
          "id" : "batch_size",
          "name" : "batch size",
@@ -212,7 +212,7 @@
       },
       {
          "command-line-flag" : "--@id",
-         "default" : 5,
+         "default-value" : 5,
          "description" : "number of epochs to train for",
          "id" : "epochs",
          "name" : "epochs",
@@ -223,7 +223,7 @@
       },
       {
          "command-line-flag" : "--@id",
-         "default" : 0.05,
+         "default-value" : 0.05,
          "description" : "data augmentation by hue alteration",
          "id" : "hue_delta",
          "name" : "hue delta",
@@ -234,7 +234,7 @@
       },
       {
          "command-line-flag" : "--@id",
-         "default" : 0.05,
+         "default-value" : 0.05,
          "description" : "data augmentation by staturation alteration range",
          "id" : "saturation_delta",
          "name" : "saturation delta",
@@ -245,7 +245,7 @@
       },
       {
          "command-line-flag" : "--@id",
-         "default" : 0.05,
+         "default-value" : 0.05,
          "description" : "data augmentation by brightness alteration range",
          "id" : "brightness_delta",
          "name" : "brightness delta",
@@ -256,7 +256,7 @@
       },
       {
          "command-line-flag" : "--@id",
-         "default" : 0.05,
+         "default-value" : 0.05,
          "description" : "data augmentation by contrast alteration range",
          "id" : "contrast_delta",
          "name" : "contrast delta",
@@ -267,7 +267,7 @@
       },
       {
          "command-line-flag" : "--@id",
-         "default" : true,
+         "default-value" : true,
          "description" : "data augmentation by flipping images horizontally",
          "id" : "horizontal_flip",
          "name" : "horizontal flip",
@@ -278,7 +278,7 @@
       },
       {
          "command-line-flag" : "--@id",
-         "default" : 15,
+         "default-value" : 15,
          "description" : "data augmentation by rotation angle range",
          "id" : "rotate_range",
          "name" : "rotate range",
@@ -289,7 +289,7 @@
       },
       {
          "command-line-flag" : "--@id",
-         "default" : 0.02,
+         "default-value" : 0.02,
          "description" : "data augmentation by streching of the image",
          "id" : "deformation_range",
          "name" : "deformation range",
@@ -300,7 +300,7 @@
       },
       {
          "command-line-flag" : "--@id",
-         "default" : [],
+         "default-value" : [],
          "description" : "id of the images used for training",
          "id" : "imgs_train",
          "name" : "imgs train",
@@ -311,7 +311,7 @@
       },
       {
          "command-line-flag" : "--@id",
-         "default" : [],
+         "default-value" : [],
          "description" : "id of the images used for validation",
          "id" : "imgs_val",
          "name" : "imgs val",
@@ -322,7 +322,7 @@
       },
       {
          "command-line-flag" : "--@id",
-         "default" : [],
+         "default-value" : [],
          "description" : "id of the images used for testing",
          "id" : "imgs_test",
          "name" : "imgs test",
@@ -333,7 +333,7 @@
       },
       {
          "command-line-flag" : "--@id",
-         "default" : "/mnt/SSD_128/tmp",
+         "default-value" : "/mnt/SSD_128/tmp",
          "description" : "where the crops are stored",
          "id" : "datadir",
          "name" : "datadir",
@@ -344,7 +344,7 @@
       },
       {
          "command-line-flag" : "--@id",
-         "default" : [],
+         "default-value" : [],
          "description" : "id of the terms to learn or predict",
          "id" : "terms",
          "name" : "terms",
@@ -355,7 +355,7 @@
       },
       {
          "command-line-flag" : "--@id",
-         "default" : -1,
+         "default-value" : -1,
          "description" : "id of the annotation delimiting the zone to segment",
          "id" : "slice_term",
          "name" : "slice term",
@@ -366,7 +366,7 @@
       },
       {
          "command-line-flag" : "--@id",
-         "default" : 1024,
+         "default-value" : 1024,
          "description" : "size of the square tiles to crop",
          "id" : "crop_size",
          "name" : "crop size",
@@ -377,7 +377,7 @@
       },
       {
          "command-line-flag" : "--@id",
-         "default" : 4,
+         "default-value" : 4,
          "description" : "number of openning and closing",
          "id" : "oc_num",
          "name" : "oc num",
@@ -388,7 +388,7 @@
       },
       {
          "command-line-flag" : "--@id",
-         "default" : 0.5,
+         "default-value" : 0.5,
          "description" : "Threshold to retain",
          "id" : "threshold",
          "name" : "threshold",
@@ -399,7 +399,7 @@
       },
       {
          "command-line-flag" : "--@id",
-         "default" : false,
+         "default-value" : false,
          "description" : "upload the result",
          "id" : "upload",
          "name" : "upload",
