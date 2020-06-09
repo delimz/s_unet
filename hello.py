@@ -40,7 +40,6 @@ with cytomine.CytomineJob.from_cli(sys.argv[1:]) as cj:
         '--cytomine_id_project', params.cytomine_id_project,
         '--slice_term', str(params.slice_term),
         '--patch-size',str(params.crop_size),
-        '--datadir',str(params.datadir),
         '--download_path', params.datadir]])
 
     cj.job.update(progress=30,statusComment="got data")
