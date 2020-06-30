@@ -2,9 +2,9 @@
    "name" : "unet",
    "container-image" : {
       "image" : "delimz/s_unet",
+      "index" : "docker://",
       "type" : "singularity"
    },
-   "schema-version" : "cytomine-0.1",
    "description" : "segmentation by unet-like neural network",
    "command-line" : "CYTOMINE_HOST CYTOMINE_PUBLIC_KEY CYTOMINE_PRIVATE_KEY CYTOMINE_ID_PROJECT CYTOMINE_ID_SOFTWARE PRESET DEPTH CONVOLUTIONS FILTER_FACTOR DILATIONS FILTER_SIZES RESIDUALS FRONT_LEG BACK_LEG CHECKPOINT MIN_OUTPUT_SIZE N_JOBS BATCH_SIZE EPOCHS HUE_DELTA SATURATION_DELTA BRIGHTNESS_DELTA CONTRAST_DELTA HORIZONTAL_FLIP ROTATE_RANGE DEFORMATION_RANGE IMGS_TRAIN IMGS_VAL IMGS_TEST DATADIR TERMS SLICE_TERM CROP_SIZE OC_NUM THRESHOLD UPLOAD",
    "inputs" : [
@@ -410,5 +410,6 @@
          "type" : "Boolean",
          "value-key" : "@ID"
       }
-   ]
+   ],
+   "schema-version" : "cytomine-0.1"
 }
