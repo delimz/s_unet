@@ -1,12 +1,10 @@
 {
-   "name" : "unet",
+   "command-line" : "CYTOMINE_HOST CYTOMINE_PUBLIC_KEY CYTOMINE_PRIVATE_KEY CYTOMINE_ID_PROJECT CYTOMINE_ID_SOFTWARE PRESET DEPTH CONVOLUTIONS FILTER_FACTOR DILATIONS FILTER_SIZES RESIDUALS FRONT_LEG BACK_LEG CHECKPOINT MIN_OUTPUT_SIZE N_JOBS BATCH_SIZE EPOCHS HUE_DELTA SATURATION_DELTA BRIGHTNESS_DELTA CONTRAST_DELTA HORIZONTAL_FLIP ROTATE_RANGE DEFORMATION_RANGE IMGS_TRAIN IMGS_VAL IMGS_TEST DATADIR TERMS SLICE_TERM CROP_SIZE OVERLAP OC_NUM THRESHOLD UPLOAD",
    "container-image" : {
       "image" : "delimz/s_unet",
-      "index" : "docker://",
       "type" : "singularity"
    },
    "description" : "segmentation by unet-like neural network",
-   "command-line" : "CYTOMINE_HOST CYTOMINE_PUBLIC_KEY CYTOMINE_PRIVATE_KEY CYTOMINE_ID_PROJECT CYTOMINE_ID_SOFTWARE PRESET DEPTH CONVOLUTIONS FILTER_FACTOR DILATIONS FILTER_SIZES RESIDUALS FRONT_LEG BACK_LEG CHECKPOINT MIN_OUTPUT_SIZE N_JOBS BATCH_SIZE EPOCHS HUE_DELTA SATURATION_DELTA BRIGHTNESS_DELTA CONTRAST_DELTA HORIZONTAL_FLIP ROTATE_RANGE DEFORMATION_RANGE IMGS_TRAIN IMGS_VAL IMGS_TEST DATADIR TERMS SLICE_TERM CROP_SIZE OC_NUM THRESHOLD UPLOAD",
    "inputs" : [
       {
          "command-line-flag" : "--@id",
@@ -181,8 +179,8 @@
       },
       {
          "command-line-flag" : "--@id",
-         "default-value" : 512,
-         "description" : "minimum size of output of the neural network",
+         "default-value" : null,
+         "description" : "minimum size of output of the neural network, default: crop_size/overlap",
          "id" : "min_output_size",
          "name" : "min output size",
          "optional" : true,
@@ -379,6 +377,17 @@
       },
       {
          "command-line-flag" : "--@id",
+         "default-value" : 2,
+         "description" : "number of overlaping images for each pixels",
+         "id" : "overlap",
+         "name" : "overlap",
+         "optional" : true,
+         "set-by-server" : false,
+         "type" : "Number",
+         "value-key" : "@ID"
+      },
+      {
+         "command-line-flag" : "--@id",
          "default-value" : 4,
          "description" : "number of openning and closing",
          "id" : "oc_num",
@@ -411,5 +420,6 @@
          "value-key" : "@ID"
       }
    ],
+   "name" : "unet",
    "schema-version" : "cytomine-0.1"
 }
